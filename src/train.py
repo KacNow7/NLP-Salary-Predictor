@@ -11,7 +11,23 @@ import mlflow
 
 def load_data_from_db():
     engine = create_engine('sqlite:///data/jobs_database.db')
-    return pd.read_sql('job_offers', con=engine)
+    df = pd.read_sql('job_offers', con=engine)
+    
+    initial_count = len(df)
+    
+    # 1. Usunięcie duplikatów
+    df = df.drop_duplicates(subset=['title', 'technologies', 'salary'])
+    
+    # 2. Oczyszczenie danych: usunięcie wierszy bez podanej pensji
+    df = df.dropna(subset=['salary'])
+    
+    # 3. Usunięcie anomalii (np. ktoś wpisał stawkę godzinową 200 zł zamiast miesięcznej)
+    df = df[df['salary'] > 3000]
+    
+    print(f"[Data Pipeline] Wczytano z bazy: {initial_count} rekordów.")
+    print(f"[Data Pipeline] Po czyszczeniu i deduplikacji zostało: {len(df)} unikalnych rekordów do treningu.")
+    
+    return df
 
 def train_model():
     df = load_data_from_db()

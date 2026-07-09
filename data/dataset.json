@@ -1,7 +1,0 @@
-[
-    {"title": "Junior Python Developer", "technologies": "python django git sql", "salary": 6000},
-    {"title": "Python Backend Developer", "technologies": "python fastapi docker postgresql aws", "salary": 12000},
-    {"title": "Senior Data Engineer", "technologies": "python spark hadoop aws snowflake", "salary": 22000},
-    {"title": "Mid Machine Learning Engineer", "technologies": "python scikit-learn pytorch mlops", "salary": 16000},
-    {"title": "Junior Data Analyst", "technologies": "python pandas sql excel", "salary": 5500}
-]

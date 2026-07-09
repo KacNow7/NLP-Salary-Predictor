@@ -3,7 +3,7 @@ import requests
 
 st.set_page_config(page_title="Salary Predictor", page_icon="💰")
 
-st.title("💸 IT Salary Predictor")
+st.title("IT Salary Predictor")
 st.write("Wpisz stanowisko i technologie, aby oszacować rynkowe wynagrodzenie.")
 
 title_input = st.text_input("Stanowisko (np. Mid Python Developer):")
