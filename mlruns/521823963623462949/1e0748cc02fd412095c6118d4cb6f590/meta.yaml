@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/NLP-Salary-Predictor/mlruns/521823963623462949/1e0748cc02fd412095c6118d4cb6f590/artifacts
+end_time: 1783597647031
+entry_point_name: ''
+experiment_id: '521823963623462949'
+lifecycle_stage: active
+run_id: 1e0748cc02fd412095c6118d4cb6f590
+run_name: likeable-ram-880
+run_uuid: 1e0748cc02fd412095c6118d4cb6f590
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783597643951
+status: 3
+tags: []
+user_id: codespace
